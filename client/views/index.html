@@ -9,18 +9,19 @@
 
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        </style>
     </head>
     <body>
-        <ul ng-controller="helloWorldList">
-        </ul>
+        <div class="container-fluid">
+            <div class="row" ng-controller="featureBoxesController">
+                <div class="col-md-4 well" ng-repeat="box in boxes">
+                    <h1><i class="fa {{box.icon}}"></i> {{box.title}}</h1>
+                    <p>{{box.body}}</p>
+                </li>
+            </div>
+        </div>
 
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+        <script type="text/javascript" src="/js/controllers/feature-boxes-controller.js"></script>
     </body>
 </html>

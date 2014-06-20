@@ -1,15 +1,16 @@
 {
-    "name": "",
-    "description": "",
-    "author": "",
-    "contributors": [
-        {
-            "name": "",
-            "email": ""
-        }
-    ],
-    "version": "0.0.1",
-    "dependencies": {
-        "express": "^4.4.3"
+  "name": "",
+  "description": "",
+  "author": "",
+  "contributors": [
+    {
+      "name": "",
+      "email": ""
     }
+  ],
+  "version": "0.0.1",
+  "dependencies": {
+    "cli-color": "^0.3.2",
+    "express": "^4.4.3"
+  }
 }
