@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="featuresApp">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -11,17 +11,64 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="row" ng-controller="featureBoxesController">
-                <div class="col-md-4 well" ng-repeat="box in boxes">
-                    <h1><i class="fa {{box.icon}}"></i> {{box.title}}</h1>
-                    <p>{{box.body}}</p>
-                </li>
+        <div class="container-fluid" ng-controller="featuresController">
+            <div class="row">
+                <div class="col-md-4 well" ng-repeat="feature in features">
+                    <h1>
+                        <i class="fa {{feature.icon}}"></i> {{feature.title}}
+                    </h1>
+                    <p>{{feature.body}}</p>
+                </div>
+            </div>
+            <div class="row well">
+                <div class="col-md-12">
+                    <form class="form-horizontal" ng-submit="createFeature()">
+                        <div class="form-group">
+                            <label for="title" class="col-sm-2 control-label">Feature Title:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="title" ng-model="title" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="body" class="col-sm-2 control-label">Feature Body:</label>
+                            <div class="col-sm-10">
+                                <textarea rows="5" class="form-control" id="body" ng-model="body" ></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="icon" class="col-sm-2 control-label">Feature Icon:</label>
+                            <div class="col-sm-10">
+                                <select class="form-control input-sm" id="icon" ng-model="icon">
+                                    <option value="fa-check-square" selected="selected">fa-check-square</option>
+                                    <option value="fa-automobile">fa-automobile</option>
+                                    <option value="fa-male">fa-male</option>
+                                    <option value="fa-female">fa-female</option>
+                                    <option value="fa-building-o">fa-building-o</option>
+                                    <option value="fa-lock">fa-lock</option>
+                                    <option value="fa-meh-o">fa-meh-o</option>
+                                    <option value="fa-shield">fa-shield</option>
+                                    <option value="fa-university">fa-university</option>
+                                    <option value="fa-dollar">fa-dollar</option>
+                                    <option value="fa-pencil-square">fa-pencil-square</option>
+                                    <option value="fa-magnet">fa-magnet</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-lg btn-primary">Add New Feature</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
-        <script type="text/javascript" src="/js/controllers/feature-boxes-controller.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-resource.min.js"></script>
+
+        <script type="text/javascript" src="/js/app.js"></script>
+        <script type="text/javascript" src="/js/controllers/features-controller.js"></script>
     </body>
 </html>
