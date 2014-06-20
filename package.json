@@ -1,0 +1,15 @@
+{
+    "name": "",
+    "description": "",
+    "author": "",
+    "contributors": [
+        {
+            "name": "",
+            "email": ""
+        }
+    ],
+    "version": "0.0.1",
+    "dependencies": {
+        "express": "^4.4.3"
+    }
+}
