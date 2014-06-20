@@ -1,18 +1,18 @@
 {
-  "name": "",
-  "description": "",
-  "author": "",
-  "contributors": [
-    {
-      "name": "",
-      "email": ""
+    "name": "",
+    "description": "",
+    "author": "",
+    "contributors": [
+        {
+            "name": "",
+            "email": ""
+        }
+    ],
+    "version": "0.0.1",
+    "dependencies": {
+        "body-parser": "^1.4.3",
+        "cli-color": "^0.3.2",
+        "express": "^4.4.3",
+        "mongoose": "^3.8.12"
     }
-  ],
-  "version": "0.0.1",
-  "dependencies": {
-    "body-parser": "^1.4.3",
-    "cli-color": "^0.3.2",
-    "express": "^4.4.3",
-    "mongoose": "^3.8.12"
-  }
 }
