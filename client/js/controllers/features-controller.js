@@ -18,5 +18,5 @@ app.controller('featuresController', ['$scope', '$resource', function($scope, $r
             $scope.body = '';
             $scope.icon = '';
         });
-    }
+    };
 }]);

@@ -4,7 +4,7 @@ module.exports.get = function(req, res) {
     Feature.find({}, function(err, results) {
         res.json(results);
     });
-}
+};
 
 module.exports.create = function(req, res) {
     var feature = new Feature(req.body);
