@@ -5,12 +5,12 @@ app.controller('featuresController', ['$scope', '$resource', function($scope, $r
         $scope.features = result;
     });
 
-    $scope.createFeature = function() {
+    $scope.createFeature = function(title, body, icon) {
         var feature = new Feature();
 
-        feature.title = $scope.title;
-        feature.body = $scope.body;
-        feature.icon = $scope.icon;
+        feature.title = title;
+        feature.body = body;
+        feature.icon = icon;
 
         feature.$save(function(result) {
             $scope.features.push(result);
